@@ -45,15 +45,3 @@ services:
       MYSQL_ROOT_PASSWORD: secret
     networks:
       - phportable
-
-  scheduler:
-    build:
-      context: .
-      dockerfile: php.dockerfile
-    container_name: scheduler
-    volumes:
-      - ./src:/var/www/html
-    working_dir: /var/www/html
-    entrypoint: ["php", "schedule:work"]
-    networks:
-      - phportable
