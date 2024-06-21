@@ -6,7 +6,12 @@ RUN addgroup -g 1000 phportable && adduser -G phportable -g phportable -s /bin/s
 
 RUN mkdir -p /var/www/html
 
-RUN apk update--no-cache && apk add--no-cache $PHPIZE_DEPS && apk add--no-cache mysql-dev && docker-php-ext-install pdo pdo_mysql
+
+RUN docker-php-ext-install pdo pdo_mysql mysqli
+
+RUN apk --no-cache add mysql-dev ${PHPIZE_DEPS} \
+    && docker-php-ext-enable mysqli \
+    && apk del ${PHPIZE_DEPS}
 
 RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
 
