@@ -9,8 +9,8 @@ RUN mkdir -p /var/www/html
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
 
-RUN apk --no-cache add mysql-dev ${PHPIZE_DEPS} \
+RUN apk --no-cache add ${PHPIZE_DEPS} \
     && docker-php-ext-enable mysqli \
     && apk del ${PHPIZE_DEPS}
 
-RUN chown phportable:phportable /var/www/html
+RUN chown -R phportable:phportable /var/www/html
