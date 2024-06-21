@@ -20,4 +20,4 @@ RUN apk --no-cache add mysql-dev ${PHPIZE_DEPS} \
 RUN chown -R phportable:phportable /var/www
 RUN chmod 775 -R /var/www
 
-chown -R www-data:root /var/www
+RUN chown -R www-data:root /var/www
