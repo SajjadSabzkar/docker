@@ -48,6 +48,7 @@ services:
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
     ports:
       - "8080:80"    #this line maps your pc port to the container port
     depends_on:
