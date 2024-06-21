@@ -13,5 +13,7 @@ RUN apk --no-cache add mysql-dev ${PHPIZE_DEPS} \
     && docker-php-ext-enable mysqli \
     && apk del ${PHPIZE_DEPS}
 
-RUN chown -R phportable:phportable /var/www/html
-RUN chmod 775 -R /var/www/html
+RUN chown -R phportable:phportable /var/www
+RUN chmod 775 -R /var/www
+
+chown -R www-data:root /var/www
