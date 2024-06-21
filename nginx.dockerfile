@@ -6,7 +6,7 @@ RUN addgroup -g 1000 phportable && adduser -G phportable -g phportable -s /bin/s
 
 RUN mkdir -p /var/www/html
 RUN chown -R phportable:phportable /var/www/html
-RUN chmod 755 /var/www/html
+RUN chmod 775 /var/www/html
 
 RUN mkdir -p /etc/nginx/certs/mkcert
 
