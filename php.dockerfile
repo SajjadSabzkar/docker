@@ -13,6 +13,4 @@ RUN apk --no-cache add mysql-dev ${PHPIZE_DEPS} \
     && docker-php-ext-enable mysqli \
     && apk del ${PHPIZE_DEPS}
 
-RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
-
 RUN chown phportable:phportable /var/www/html
