@@ -54,7 +54,6 @@ services:
       - mysql    #this line links this container to the db container
     environment:
       PMA_HOST: mysql
-      MYSQL_ROOT_PASSWORD: secret
     networks:
       - phportable    
   
