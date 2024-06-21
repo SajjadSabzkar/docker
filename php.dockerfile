@@ -6,7 +6,7 @@ RUN addgroup -g 1000 phportable && adduser -G phportable -g phportable -s /bin/s
 
 #RUN addgroup --gid 1000 phportable
 #RUN adduser --ingroup phportable --shell /bin/sh phportable
-USER phportable
+#USER phportable
 
 RUN mkdir -p /var/www/html
 
