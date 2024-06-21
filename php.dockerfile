@@ -6,6 +6,6 @@ RUN addgroup -g 1000 phportable && adduser -G phportable -g phportable -s /bin/s
 
 RUN mkdir -p /var/www/html
 
-RUN docker-php-ext-install mysqli
+RUN docker-php-ext-install mysqli && docker-php-ext-enable mysqli
 
 RUN chown phportable:phportable /var/www/html
