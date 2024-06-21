@@ -40,7 +40,7 @@ services:
       - ./mysql:/var/lib/mysql
     environment:
       MYSQL_DATABASE: laraveldb
-      MYSQL_USER: laravel
+      MYSQL_USER: phportable
       MYSQL_PASSWORD: secret
       MYSQL_ROOT_PASSWORD: secret
     networks:
