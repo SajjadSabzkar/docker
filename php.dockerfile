@@ -5,7 +5,7 @@ ARG UID
 ARG GID
 
 RUN addgroup -g $GID myuser && \
-adduser --disabled-password --gecos '' --uid $GID --gid $GID myuser
+adduser --disabled-password --gecos '' --uid $GID -g $GID myuser
 
     
 RUN mkdir -p /code/Projects
