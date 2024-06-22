@@ -1,8 +1,3 @@
-<p align="center">
-<a href="https://github.com/amirrezaraadi">
-<img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status">
-</a>
-</p>
 
 ### Get to know me more 👇
 
