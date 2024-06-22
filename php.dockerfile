@@ -1,6 +1,6 @@
 FROM php:8.1-fpm-alpine
 
-mkdir -p /code/Projects
+RUN mkdir -p /code/Projects
 WORKDIR /code/Projects
 
 ADD ./php/www.conf /usr/local/etc/php-fpm.d/www.conf
