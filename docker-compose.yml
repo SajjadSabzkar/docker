@@ -9,8 +9,10 @@ services:
     build:
       context: .
       dockerfile: nginx.dockerfile
+    args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
     container_name: nginx
-    user: "root"
     depends_on:
       - php
       - mysql
@@ -19,7 +21,6 @@ services:
       - 443:443
     volumes:
       - ./src:/code/Projects
-    command: chown -R 1000:1000 /code/Projects
     networks:
       - phportable
 
@@ -27,14 +28,12 @@ services:
     build:
       context: .
       dockerfile: php.dockerfile
-      args:
+    args:
         - UID=${UID:-1000}
         - GID=${GID:-1000}
     container_name: php
-    user: "root"
     volumes:
       - ./src:/code/Projects
-    command: chown -R 1000:1000 /code/Projects
     networks:
       - phportable
 
