@@ -19,8 +19,9 @@ RUN apk --no-cache add mysql-dev ${PHPIZE_DEPS} \
 # Copy existing application directory contents
 #COPY ./src .
 
-RUN addgroup --gid 1000 phportable
-RUN adduser --ingroup phportable --shell /bin/sh phportable
+#RUN addgroup --gid 1000 phportable
+#RUN adduser --ingroup phportable --shell /bin/sh phportable
+RUN addgroup -g 1000 phportable && adduser -G phportable -g phportable -s /bin/sh -D phportable
 
 USER phportable
 
