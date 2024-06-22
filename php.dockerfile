@@ -4,9 +4,9 @@ FROM php:8.1-fpm-alpine
 ARG UID
 ARG GID
 
-RUN addgroup -g $GID myuser && \
-adduser --disabled-password --gecos '' --uid $GID -g $GID myuser
 
+RUN addgroup -g 1000 myuser \
+    && adduser --disabled-password -G myuser -u 1000 myuser -D
     
 RUN mkdir -p /code/Projects
 
