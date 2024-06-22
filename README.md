@@ -6,7 +6,11 @@
 
 > Clone your PHP files in the src folder
 
->then copy this directory to a desired location on your development machine.
+> then copy this directory to a desired location on your development machine.
+
+> replce $USER with normal User
+
+` sudo usermod -aG docker $USER && reboot` 
 
 > Next, navigate in your terminal to that directory, and spin up the containers for the full web server stack by running
 
