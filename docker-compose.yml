@@ -9,7 +9,7 @@ services:
     build:
       context: .
       dockerfile: nginx.dockerfile
-    args:
+      args:
         - UID=${UID:-1000}
         - GID=${GID:-1000}
     container_name: nginx
@@ -28,7 +28,7 @@ services:
     build:
       context: .
       dockerfile: php.dockerfile
-    args:
+      args:
         - UID=${UID:-1000}
         - GID=${GID:-1000}
     container_name: php
