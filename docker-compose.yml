@@ -25,6 +25,9 @@ services:
     build:
       context: .
       dockerfile: php.dockerfile
+    args: 
+      USER_ID: 1000
+      GROUP_ID: 1000  
     container_name: php
     volumes:
       - ./src:/code/Projects
