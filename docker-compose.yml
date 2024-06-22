@@ -17,7 +17,7 @@ services:
       - 80:80
       - 443:443
     volumes:
-      - ./src:/var/www/html
+      - ./src:/code/Projects
     networks:
       - phportable
 
@@ -27,7 +27,7 @@ services:
       dockerfile: php.dockerfile
     container_name: php
     volumes:
-      - ./src:/var/www/html
+      - ./src:/code/Projects
     networks:
       - phportable
 
