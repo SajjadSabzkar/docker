@@ -10,6 +10,7 @@ services:
       context: .
       dockerfile: nginx.dockerfile
     container_name: nginx
+    user: "root"
     depends_on:
       - php
       - mysql
@@ -30,6 +31,7 @@ services:
         - UID=${UID:-1000}
         - GID=${GID:-1000}
     container_name: php
+    user: "root"
     volumes:
       - ./src:/code/Projects
     command: chown -R 1000:1000 /code/Projects
